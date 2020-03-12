@@ -4,15 +4,8 @@
 * mkdir build && cd build
 * cmake ..
 * make
-* To run tests: `./tests/tests`
-* To run benchmarks: `./benchmarks/benchmarks`
-* To run examples: `./examples/udp_multicast_example`
+* To run 
+    - Sender     `./src/sender 239.255.0.1`
+    - Receiver   `./src/receiver 0.0.0.0 239.255.0.1`
 
 
-### Directory Structure
-* **benchmarks**: contains tests for performance benchmarking
-* **examples**: contains sample applications that use src files
-* **tests**: contains tests for functional verification
-* **src**: contains private header/cpp files
-* **externals**: contains third-party libraries
-* **include**: contains public header files

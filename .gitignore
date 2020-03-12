@@ -1,0 +1,5 @@
+build
+**/.vscode/
+externals/lib/
+externals/include/
+externals/catch2/
