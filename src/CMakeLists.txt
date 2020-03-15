@@ -12,8 +12,7 @@ include_directories(${CMAKE_SOURCE_DIR}/include)
 
 add_library(${PROJECT_NAME} ${SOURCES})
 
-set(SENDER sender.cpp)
-set(RECEIVER receiver.cpp)
+set(APPLICATION application.cpp)
 
 # Add executable target with source files listed in SOURCE_FILES variable
 
@@ -23,8 +22,6 @@ set(Boost_USE_STATIC_RUNTIME OFF)
 find_package(Boost 1.65.1 COMPONENTS filesystem regex) 
 
 if(Boost_FOUND)
-    add_executable(sender ${SENDER}) 
-    add_executable(receiver ${RECEIVER}) 
-    target_link_libraries(sender Boost::filesystem Boost::regex)
-    target_link_libraries(receiver Boost::filesystem Boost::regex)
+    add_executable(multicast_app ${APPLICATION}) 
+    target_link_libraries(multicast_app Boost::filesystem Boost::regex)
 endif() 

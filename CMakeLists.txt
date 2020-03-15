@@ -21,10 +21,10 @@ if(NOT CMAKE_BUILD_TYPE AND NOT CMAKE_CONFIGURATION_TYPES)
     "Debug" "Release" "MinSizeRel" "RelWithDebInfo")
 endif()
 
-set (CMAKE_CXX_FLAGS_DEBUG  "${CMAKE_CXX_FLAGS_DEBUG} \
-  -fPIC -Wall -pedantic -Wextra -Werror \
-  -Wno-missing-braces -Wno-unused-variable \
-  -Wno-ignored-qualifiers  -fdiagnostics-color")
+# set (CMAKE_CXX_FLAGS_DEBUG  "${CMAKE_CXX_FLAGS_DEBUG} \
+#   -fPIC -Wall -pedantic -Wextra -Werror \
+#   -Wno-missing-braces -Wno-unused-variable \
+#   -Wno-ignored-qualifiers  -fdiagnostics-color")
 set (CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_DEBUG} -fno-omit-frame-pointer -DNDEBUG -O3")
 
 message("-- Build Type: ${CMAKE_BUILD_TYPE}")

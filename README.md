@@ -5,7 +5,8 @@
 * cmake ..
 * make
 * To run 
-    - Sender     `./src/sender 239.255.0.1`
-    - Receiver   `./src/receiver 0.0.0.0 239.255.0.1`
+    - ./src/multicast_app 0.0.0.0 239.x.x.x
+    - Run multiple instances of multicast_app in separate tabs simultaneously 
+    - To send a message on the group, type on the console and press enter to send.
 
 
