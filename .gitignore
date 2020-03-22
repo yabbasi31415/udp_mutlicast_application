@@ -3,3 +3,4 @@ build
 externals/lib/
 externals/include/
 externals/catch2/
+externals/Lyra
