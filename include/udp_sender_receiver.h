@@ -1,3 +1,6 @@
+#ifndef UDP_SENDER_RECEIVER_H
+#define UDP_SENDER_RECEIVER_H
+
 #include <iostream>
 #include <sstream>
 #include <string>
@@ -119,34 +122,7 @@ class receiver
   char data_[max_length];
 };
 
-int main(int argc, char* argv[])
-{
-  try
-  {
-    if (argc != 3)
-    {
-      std::cerr << "Usage: receiver <listen_address> <multicast_address>\n";
-      std::cerr << "  For IPv4, try:\n";
-      std::cerr << "    receiver 0.0.0.0 239.255.0.1\n";
-      std::cerr << "  For IPv6, try:\n";
-      std::cerr << "    receiver 0::0 ff31::8000:1234\n";
-      return 1;
-    }
+int start_chat();
 
-    boost::asio::io_service io_service;
-
-    sender s(io_service, boost::asio::ip::address::from_string(argv[2]));
-    receiver r(io_service,
-        boost::asio::ip::address::from_string(argv[1]),
-        boost::asio::ip::address::from_string(argv[2]));
-    io_service.run();
-  }
-  catch (std::exception& e)
-  {
-    std::cerr << "Exception: " << e.what() << "\n";
-  }
-
-  return 0;
-}
-
+#endif
 #endif

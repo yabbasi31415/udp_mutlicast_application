@@ -1,5 +1,6 @@
 #include <iostream>
 #include <lyra/lyra.hpp>
+#include "udp_sender_receiver.h"
 
 int main(int argc, const char** argv)
 {
@@ -34,6 +35,8 @@ int main(int argc, const char** argv)
 	}
 
 	std::cout << config.listen_ip << " " << " " << config.multicast_ip << " " << config.multicast_port << std::endl;
+
+	start_chat();
 
 	return 0;
 }
