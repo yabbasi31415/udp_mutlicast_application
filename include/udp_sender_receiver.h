@@ -32,7 +32,7 @@ public:
     
     std::string str_in;
 
-    std::cout << "Chat Group Started. \n";
+    std::cout << "Chat Group Started. " << endpoint_ << "\n";
    
     async_read_until(stream_, b, '\n', read_handler); 
   }
@@ -103,7 +103,7 @@ class receiver
     {
       if (!error)
       {
-        std::cout << "[ " << sender_endpoint_ <<  "] "; 
+        std::cout << "[ " << sender_endpoint_.address()  << " " << sender_endpoint_.port() <<  "] "; 
         std::cout.write(data_, bytes_recvd);
         std::cout << std::endl;
 
@@ -122,7 +122,7 @@ class receiver
   char data_[max_length];
 };
 
-int start_chat();
+int start_chat(std::string listen_ip, std::string multicast_ip, std::string multicast_port);
 
 #endif
 #endif

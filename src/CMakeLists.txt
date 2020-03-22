@@ -15,13 +15,3 @@ add_library(${PROJECT_NAME} ${SOURCES})
 set(UDP_APPLICATION udp_sender_receiver.cpp)
 
 # Add executable target with source files listed in SOURCE_FILES variable
-
-# set(Boost_USE_STATIC_LIBS OFF) 
-# set(Boost_USE_MULTITHREADED ON)  
-# set(Boost_USE_STATIC_RUNTIME OFF) 
-# find_package(Boost 1.65.1 COMPONENTS filesystem regex) 
-
-# if(Boost_FOUND)
-#     add_executable(multicast_app ${UDP_APPLICATION}) 
-#     target_link_libraries(multicast_app Boost::filesystem Boost::regex)
-# endif() 
