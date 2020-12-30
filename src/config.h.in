@@ -1,3 +1,0 @@
-#cmakedefine ENABLE_LOGGING
-#cmakedefine LOG_ACTIVE_LEVEL @LOG_TYPE@
-
